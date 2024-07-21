@@ -41,4 +41,22 @@ class Equation(Operation):
             num = equation.split(self.remainder)
             return num
 
+    def solve(self, digits, sign):
+        "solves one step equation"
+        if sign == "addition":
+            return (int(digits[0]) + int(digits[1]))
+        if sign == "subtraction":
+            return (int(digits[0]) - int(digits[1]))
+        if sign == "multiplication":
+            return (int(digits[0]) * int(digits[1]))
+        if sign == "division":
+            return round((int(digits[0]) / int(digits[1])), 3)
+        if sign == "remainder":
+            return (int(digits[0]) % int(digits[1]))
+
+        
+
+
+
+
 

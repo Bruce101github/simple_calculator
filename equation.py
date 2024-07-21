@@ -23,3 +23,22 @@ class Equation(Operation):
         elif signs > 1:
             return "Multi-step"
 
+    def seperate_equation(self, equation, sign):
+        """This would seperate the two digits in an equation"""
+        if sign == "addition":
+            num = equation.split(self.addition)
+            return num
+        if sign == "subtraction":
+            num = equation.split(self.subtraction)
+            return num
+        if sign == "multiplication":
+            num = equation.split(self.multiplication)
+            return num
+        if sign == "division":
+            num = equation.split(self.division)
+            return num
+        if sign == "remainder":
+            num = equation.split(self.remainder)
+            return num
+
+

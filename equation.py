@@ -59,16 +59,16 @@ class Equation(Operation):
         answer = int(digits[0])
         for digit, sign in zip(digits[1:],signs):
             if sign == "+":
-                answer += digit
+                answer += int(digit)
             elif sign == "-":
-                answer += digit
-            elif sign == "*":
-                answer += digit
+                answer -= int(digit)
+            elif sign == "x":
+                answer *= int(digit)
             elif sign == "/":
-                answer += digit
+                answer /= int(digit)
             elif sign == "%":
-                answer += digit
-
+                answer %= int(digit)
+        return answer
 
 
 

@@ -54,6 +54,24 @@ class Equation(Operation):
         if sign == "remainder":
             return (int(digits[0]) % int(digits[1]))
 
+    def solve_multi_step(self, digits, signs):
+        """Solves Multi step equations"""
+        answer = int(digits[0])
+        for digit, sign in zip(digits[1:],signs):
+            if sign == "+":
+                answer += digit
+            elif sign == "-":
+                answer += digit
+            elif sign == "*":
+                answer += digit
+            elif sign == "/":
+                answer += digit
+            elif sign == "%":
+                answer += digit
+
+
+
+
         
 
 
